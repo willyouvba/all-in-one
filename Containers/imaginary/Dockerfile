@@ -17,6 +17,9 @@ FROM alpine:3.20.3
 RUN set -ex; \
     apk upgrade --no-cache -a; \
     apk add --no-cache \
+        libheif \
+        --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community; \
+    apk add --no-cache \
         tzdata \
         ca-certificates \
         netcat-openbsd \
